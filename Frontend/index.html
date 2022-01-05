@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css?v1201221">
+    <link href="http://fonts.cdnfonts.com/css/maiandra-gd" rel="stylesheet">
+    <title>Coffe&Pastries</title>
+</head>
+<body>
+
+
+    <section class="sectionOne">
+        
+        <div class="filtroLuz">
+            <div class="logo">
+                <img src="Administracion/public/img/114520855-diseño-de-icono-de-taza-de-café-para-menú-de-cafetería-o-bar-etiqueta-de-diseño-de-café-natural-aisl.jpg" alt="logo">
+            </div>
+            <h1>Bienvenidos a coffee & pastries</h1>
+        </div>
+    </section>
+    <section class="sectionTwo">
+        <div class="filtroLuz2">
+           <p class="tituloProducto">Productos</p>
+           
+
+            <div class="carrito" id="carrito">
+                <p>Mi pedido:</p>
+                <img src="Administracion/public/img/pedido.png" alt="">
+                <div>0</div>
+            </div>
+          
+            <div class="line"></div>
+
+            <div class="containerFiltros">
+                <p>Filtros:</p>
+                <div class="filtro">
+                    Todo
+                </div>
+                <div class="filtro">
+                    Bebidas Calientes
+                </div>
+                <div class="filtro">
+                    Postres
+                </div>
+                <div class="filtro">
+                    Bebidas Frias
+                </div>
+                <div class="filtro">
+                    Comidas
+                </div>
+            </div>
+
+            <div class="containerProductos">
+                <div class="productos">
+
+                    
+                </div>
+                <div class="masProductos">
+                    <img src="Administracion/public/img/ordenar-abajo.png" alt="">
+                </div>  
+            </div>
+
+            <div class="modalContainer" id="modalContainer">
+                <div class="modalCarrito modalCarritoClose" id="">
+                    <div class="headerModal">
+                        <h2>Mi pedido</h2>
+                        <p class="close">X</p>
+                    </div>
+                    <div class="bodyModal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Cantidad</th>
+                                    <th>Acciones</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="itemsCar">      
+
+                            </tbody >
+                                
+                            <tfoot id="footerTable">
+                                <tr >
+                                    <th colspan="5">El pedido se encuentra vacio</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <form id="payment-form">
+                            <div id="payment-element">
+                                <!-- Elements will create form elements here -->
+                              </div>
+                              <button id="submit">Submit</button>
+                              <div id="error-message">
+                                <!-- Display error message to your customers here -->
+                              </div>
+                        </form>
+
+                    </div>
+                    <div class="footerModal">
+                        <button id="btnCerrar" class="btnCerrar">Cerrar</button>
+                        <button id="btnComprar" class="btnCerrar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <template id="templateProductosUser"> 
+                <div class="producto">
+                    <div class="headProducto">
+                        <img>
+                        <h6></h6>
+                        <img>
+                    </div>
+                    <div class="imgProducto">
+                        <img>
+                    </div>
+                    <div class="bodyProducto">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <button class="btnAgregarCarrito">Agregar al pedido</button>
+                </div>
+            </template>
+
+            <template id="templateCarrito">
+                <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btnSumar">+</button>
+                        <button class="btnRestar">-</button>
+                    </td>
+                    <td></td>
+                </tr>
+            </template>
+
+            <template id="templateCarritoFooter">
+                <tr >
+                    <th colspan="2">Total productos</th>
+                    <td></td>
+                    <td><button id="btnVaciarCarrito" class="btnVaciarCarrito">Vaciar todo</button> </td>
+                    <td></td>
+                </tr>
+            </template>
+
+            <template id="templateMiPedido">
+                <p>Mi pedido:</p>
+                <img src="Administracion/public/img/pedido.png" alt="">
+                <div></div>
+            </template>
+
+            
+        </div>
+        
+    </section>
+    <footer>
+        <div class="part1">
+            <img src="Administracion/public/img/114520855-diseño-de-icono-de-taza-de-café-para-menú-de-cafetería-o-bar-etiqueta-de-diseño-de-café-natural-aisl.jpg" alt="">
+            <p>Todos los derechos reservados</p>
+        </div>
+        <div class="part2">
+            <a href="">Inicio</a> 
+            <a href="">Menu</a> 
+            <a href="">Nosotros</a>
+            <a href="">Tu Sugerencia</a>
+        </div>
+        <div class="part3">
+            <p>Contactos</p>
+            <p>Telefono: 2881304760</p>
+            <p>Twitter: @coffe&pastries</p>
+            <p>Instagram: coffe&pastries </p>
+            <p>Faceboock: coffe&pastries</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./index.js"></script>
+    <script src="./script/payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,1160 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+
+
+/* Dispositivos moviles*/
+
+@media  only screen and (max-width: 999px){
+
+    .imgBackgroundMenu{
+        background-image: url('../../public/img/backgrund-administracion.jpg');
+        width: 100%;
+        
+    }
+
+    .opacity{
+        background-color: #a5a5a58a;
+        width: 100%;
+    }
+
+    .btmMenu{
+        text-align: right;
+        background-color: #F3CE9E;
+    }
+
+    .btmMenu img{
+        width: 50px;
+        height: 50px;
+        margin-right: 30px;
+    }
+
+    .containerNavbar{
+        background-color: #F3CE9E;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        top: -1050px;
+        z-index: 10;
+    }
+
+    .containerNavbar.activar{
+        top: 49px;
+    }
+
+    .containerNavbar .imgLogo{
+        margin: 10px 10px;   
+    }
+
+    .containerNavbar .imgLogo img{
+        width:100px; 
+        height:100px;
+    }
+    
+    .containerNavbar .options{
+        clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+    background-color: #78664E;
+    
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+    
+    font-family: 'Cooper';
+    font-size: 18px;
+    }
+    
+    .containerNavbar .options a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 100%;
+    }
+    
+    .containerNavbar .options a:hover{
+        background-color: #9b876d;
+    }
+    
+    .containerNavbar .options a p{
+        padding: 15px 0px;
+    }
+
+    .line{
+        
+        margin-bottom: 20px;
+        border: 1px solid #494949;
+        width: 100%;
+        
+        background-color: #494949;
+    }
+
+    .btnAgregarProducto{
+        width: 150px;
+        height: 25px;
+        font-size: 15px;
+        background-color: #C8F4A7;
+        border: 1px solid #707070;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    
+    table {
+        width: 100%;
+        
+    }
+
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #707070;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    table td[data-titulo]{
+        display: flex;
+    }
+
+    table td[data-titulo]::before{
+       
+        content: attr(data-titulo);
+        width: 100px;
+        background-color: #C8F4A7;
+        border: none;
+       
+    }
+
+   
+
+    table td[data-titulo="Imagen"]::before{
+       
+        padding-top: 20px;
+        
+    }
+
+   
+
+    table thead{
+        display: none;
+    }
+
+
+    .containerTable .btnEditar{
+        width: 80px;
+        background-color: #77A6F8;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 0px;
+    }
+    
+    
+    .containerTable .btnEliminar{
+        width: 80px;
+        background-color: #F75757;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 5px;
+    }
+
+    .cerrarSesion{
+        width:40px;
+        height:40px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .cerrarSesion img{
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    .modalContainer{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.664);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalPersonal{
+        width: 90%;
+        background-color: white;
+        transition:transform 0.8s;
+        transform: translateY(0%);
+    }
+
+    .modalPersonalClose{
+        transform: translateY(-200%);
+    }
+
+    .modalPersonal .headerModal{
+        background-color: #F1E1BC;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modalPersonal .headerModal img{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+
+    .modalPersonal .headerModal h6{
+  
+        margin-top: 2%;
+        margin-left: 22%;
+        font-size: 16px;
+        
+        
+    }
+
+    .modalPersonal .headerModal p{
+        font-size: 16px;
+        margin-left: 28%;
+        margin-right: 1%;
+        margin-top: 1%;
+        height: 20px;
+        background-color: #AAF08F;
+    }
+
+    .modalPersonal .bodyModal{
+        background-color: rgb(255, 255, 255);
+        padding: 10px 10%;
+    }
+
+    .modalPersonal .bodyModal form > input:first-child {
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    .modalPersonal .bodyModal textarea {
+        text-align: center;
+        resize: none;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+      }
+
+    .modalPersonal .bodyModal select{
+        text-align: center;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+    }  
+
+    .modalPersonal .bodyModal .container3elements{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+
+    .modalPersonal .bodyModal .container3elements input:nth-child(1){
+        text-align: center;
+        width: 20%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+
+    }
+
+
+
+    .modalPersonal .bodyModal .container3elements img{
+        width: 33px;
+        height: 33px;
+        border: 1px solid #707070;
+        margin: 0px 2%;
+    }
+
+
+    .modalPersonal .bodyModal .container3elements .file input{
+        display: none;
+    }
+
+    .modalPersonal .bodyModal .container3elements .file label{
+        display: block;
+        padding: auto;
+        border: 1px solid #707070;
+        background-color: #C7C0C0;
+        cursor: pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        width: 130px;
+        text-align: center;
+        height: 25px;
+    }
+
+    .modalPersonal .footerModal{
+        background-color: #F1E1BC;
+        text-align: center;
+    }
+
+    .modalPersonal .footerModal button{
+        width: 120px;
+        margin: 10px 20px;
+        border: 1px solid #78664E;
+    }
+
+    .modalPersonal .footerModal .btnAgregar{
+        background-color: #AAF08F;
+    }
+
+    .modalPersonal .footerModal .btnSalir{
+        background-color: #F08F8F;
+    }
+
+    .containerPreviewImage{
+        width: 89%;
+        height: 61%;
+        background-color: white;
+        margin-left: 8px;
+        transition-property: width, visibility, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        position: absolute;
+    }
+
+    .containerPreviewImage .header{
+        background-color: #F1E1BC;
+        height: 80px;
+        text-align: center;
+        transition-property: clip-path, background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    .containerPreviewImage .header:hover{
+        background-color: #F1E1BC;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    
+
+    .containerPreviewImage .header p{
+        
+        position: relative;
+        top: 30%;
+    }
+
+    .containerPreviewImage  .body img{
+        height: 270px;
+        width: 100%;
+        
+    }
+
+    .containerPreviewImage .actions{
+        background-color:#F1E1BC ;
+        height: 11%;
+        text-align: center;
+    }
+
+    .containerPreviewImage .actions button{
+        margin: 3% 0px;
+        background-color: #F08F8F;
+        border: 1px solid #707070;
+        width: 30%;
+    }
+
+
+    .PreviewImageClose{
+        
+        /* clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+         */
+
+         opacity: 0;
+        visibility: hidden;
+       
+    }
+}
+
+
+/*Destok*/
+
+@media  only screen and (min-width: 1000px){
+    
+    .imgBackgroundMenu{
+        background-image: url('../../public/img/backgrund-administracion.jpg');
+       background-size: 100% 100%;
+       background-repeat:no-repeat;
+       width: 100%;
+    }
+    
+    
+    .opacity{
+        background-color: rgba(160, 160, 160, 0.6);
+        width: 100%;
+    }
+    .btmMenu{
+        visibility: hidden;
+        display: none;
+    }
+    .containerNavbar{
+      background-color: #F3CE9E;
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+     position: sticky;
+     top: 0px;
+    }
+    
+    .containerNavbar .imgLogo{
+    
+        margin: 5px 10px;
+        flex-grow: 1;
+        
+    }
+
+    .containerNavbar .imgLogo img{
+        width:50px; 
+        height:50px;
+    }
+    
+    .containerNavbar .options{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-color: #78664E;
+    
+    width: 234px;
+    
+    text-align: center;
+    
+    font-family: 'Cooper';
+    font-size: 18px;
+    }
+    
+    .containerNavbar .options a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 100%;
+    }
+    
+    .containerNavbar .options a:hover{
+        background-color: #9b876d;
+    }
+    
+    .containerNavbar .options a p{
+        padding: 15px 0px;
+    }
+    
+    
+    .btnAgregarProducto{
+        width: 150px;
+        height: 25px;
+        font-size: 15px;
+        background-color: #C8F4A7;
+        border: 1px solid #707070;
+        margin-top: 36px;
+        margin-left: 230px;
+    }
+    
+    .line{
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 40px;
+        border: 1px solid #494949;
+        width: 80%;
+        background-color: #494949;
+    }
+    
+    .line2{
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        border: 1px solid #494949;
+        width: 80%;
+        background-color: #494949;
+    }
+    
+    
+    .containerTable{
+        width: 74%;
+        border: 3px solid #000000;
+        margin: 0px 13%;
+    }
+    
+    .containerTable table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    
+    th, td{
+        padding: 5px;
+    }
+    
+    td{
+        background-color: azure;
+       
+    }
+    
+    thead {
+        
+        background-color: #C8F4A7;
+        border-bottom:4px solid #707070;
+    }
+    
+    
+    .containerTable .btnEditar{
+        width: 80px;
+        background-color: #77A6F8;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 0px;
+    }
+    
+    
+    .containerTable .btnEliminar{
+        width: 80px;
+        background-color: #F75757;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 0px;
+    }
+    
+    .cerrarSesion{
+        width:40px;
+        height:40px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .cerrarSesion img{
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    .modalContainer{
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.664);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modalPersonal{
+        width: 40%;
+        background-color: white;
+        transition:transform 0.8s;
+        transform: translateY(0%);
+    }
+
+    .modalPersonalClose{
+        transform: translateY(-200%);
+    }
+
+    .modalPersonal .headerModal{
+        background-color: #F1E1BC;
+        display: flex;
+        
+    }
+
+    .modalPersonal .headerModal img{
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+    }
+
+    .modalPersonal .headerModal h6{
+        height: 30px;
+        margin-top: 5%;
+        margin-left: 18%;
+        font-size: 20px;
+    }
+
+    .modalPersonal .headerModal p{
+        font-size: 16px;
+        margin-left: 28%;
+        margin-top: 1%;
+        height: 20px;
+    }
+
+    .modalPersonal .bodyModal{
+        background-color: rgb(255, 255, 255);
+        padding: 10px 10%;
+    }
+
+    .modalPersonal .bodyModal form > input:first-child {
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    .modalPersonal .bodyModal textarea {
+        text-align: center;
+        resize: none;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+      }
+
+    .modalPersonal .bodyModal select{
+        text-align: center;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+    }  
+
+    .modalPersonal .bodyModal .container3elements{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+
+    .modalPersonal .bodyModal .container3elements input:nth-child(1){
+        text-align: center;
+        width: 20%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+
+    }
+
+
+
+    .modalPersonal .bodyModal .container3elements img{
+        width: 33px;
+        height: 33px;
+        border: 1px solid #707070;
+        margin: 0px 2%;
+    }
+
+
+    .modalPersonal .bodyModal .container3elements .file input{
+        display: none;
+    }
+
+    .modalPersonal .bodyModal .container3elements .file label{
+        display: block;
+        padding: auto;
+        border: 1px solid #707070;
+        background-color: #C7C0C0;
+        cursor: pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        width: 130px;
+        text-align: center;
+        height: 25px;
+    }
+
+    .modalPersonal .footerModal{
+        background-color: #F1E1BC;
+        text-align: center;
+    }
+
+    .modalPersonal .footerModal button{
+        width: 120px;
+        margin: 10px 20px;
+        border: 1px solid #78664E;
+    }
+
+    .modalPersonal .footerModal .btnAgregar{
+        background-color: #AAF08F;
+    }
+
+    .modalPersonal .footerModal .btnSalir{
+        background-color: #F08F8F;
+    }
+
+    .containerPreviewImage{
+        width: 24%;
+        height: 61%;
+        background-color: white;
+        margin-left: 10px;
+        transition-property: width, visibility, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        
+    }
+
+    .containerPreviewImage .header{
+        background-color: #F1E1BC;
+        height: 80px;
+        text-align: center;
+        transition-property: clip-path, background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    .containerPreviewImage .header:hover{
+        background-color: #F1E1BC;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    
+
+    .containerPreviewImage .header p{
+        
+        position: relative;
+        top: 30%;
+    }
+
+    .containerPreviewImage  .body img{
+        height: 270px;
+        width: 100%;
+        
+    }
+
+    .containerPreviewImage .actions{
+        background-color:#F1E1BC ;
+        height: 11%;
+        text-align: center;
+    }
+
+    .containerPreviewImage .actions button{
+        margin: 3% 0px;
+        background-color: #F08F8F;
+        border: 1px solid #707070;
+        width: 30%;
+    }
+
+
+    .PreviewImageClose{
+         width: 0.1%;
+        /* clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+         */
+
+         opacity: 0;
+        visibility: hidden;
+       
+    }
+}
+
+
+@media  only screen and (min-width: 1200px){
+    
+    .imgBackgroundMenu{
+        background-image: url('../../public/img/backgrund-administracion.jpg');
+       background-size: 100% 100%;
+       background-repeat:no-repeat;
+       width: 100%;
+    }
+    
+    
+    .opacity{
+        background-color: rgba(160, 160, 160, 0.6);
+        width: 100%;
+    }
+    .btmMenu{
+        visibility: hidden;
+        display: none;
+    }
+    .containerNavbar{
+      background-color: #F3CE9E;
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+     position: sticky;
+     top: 0px;
+    }
+    
+    .containerNavbar .imgLogo{
+    
+        margin: 5px 10px;
+        flex-grow: 1;
+        
+    }
+
+    .containerNavbar .imgLogo img{
+        width:50px; 
+        height:50px;
+    }
+    
+    .containerNavbar .options{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-color: #78664E;
+    
+    width: 234px;
+    
+    text-align: center;
+    
+    font-family: 'Cooper';
+    font-size: 18px;
+    }
+    
+    .containerNavbar .options a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 100%;
+    }
+    
+    .containerNavbar .options a:hover{
+        background-color: #9b876d;
+    }
+    
+    .containerNavbar .options a p{
+        padding: 15px 0px;
+    }
+    
+    
+    .btnAgregarProducto{
+        width: 150px;
+        height: 25px;
+        font-size: 15px;
+        background-color: #C8F4A7;
+        border: 1px solid #707070;
+        margin-top: 36px;
+        margin-left: 230px;
+    }
+    
+    .line{
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 40px;
+        border: 1px solid #494949;
+        width: 80%;
+        background-color: #494949;
+    }
+    
+    .line2{
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        border: 1px solid #494949;
+        width: 80%;
+        background-color: #494949;
+    }
+    
+    
+    .containerTable{
+        width: 74%;
+        border: 3px solid #000000;
+        margin: 0px 13%;
+    }
+    
+    .containerTable table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    
+    th, td{
+        padding: 5px;
+    }
+    
+    td{
+        background-color: azure;
+       
+    }
+    
+    thead {
+        
+        background-color: #C8F4A7;
+        border-bottom:4px solid #707070;
+    }
+    
+    table td[data-titulo="Descripcion"]{
+        width:  40%;
+    }
+    
+    .containerTable .btnEditar{
+        width: 80px;
+        background-color: #77A6F8;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 0px;
+    }
+    
+    
+    .containerTable .btnEliminar{
+        width: 80px;
+        background-color: #F75757;
+        border: 1px solid #707070;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Segoe UI';
+        font-weight:bold;
+        margin: 2px 0px;
+    }
+    
+    .cerrarSesion{
+        width:40px;
+        height:40px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .cerrarSesion img{
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    .modalContainer{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.664);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalPersonal{
+        width: 40%;
+        background-color: white;
+        transition:transform 0.8s;
+        transform: translateY(0%);
+    }
+
+    .modalPersonalClose{
+        transform: translateY(-200%);
+    }
+
+    .modalPersonal .headerModal{
+        background-color: #F1E1BC;
+        display: flex;
+    }
+
+    .modalPersonal .headerModal img{
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+    }
+
+    .modalPersonal .headerModal h6{
+        height: 30px;
+        margin-top: 5%;
+        margin-left: 18%;
+        font-size: 20px;
+    }
+
+    .modalPersonal .headerModal .close{
+        text-align: center;
+        font-size: 16px;
+        margin-left: 28%;
+        margin-top: 1%;
+        height: 20px;
+        width: 20px;
+        background: #F08F8F;
+    }
+
+    .modalPersonal .bodyModal{
+        background-color: rgb(255, 255, 255);
+        padding: 10px 10%;
+    }
+
+    .modalPersonal .bodyModal form > input:first-child {
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    .modalPersonal .bodyModal textarea {
+        text-align: center;
+        resize: none;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+      }
+
+    .modalPersonal .bodyModal select{
+        text-align: center;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        padding: 4px;
+        margin-bottom: 20px;
+    }  
+
+    .modalPersonal .bodyModal .container3elements{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+
+    .modalPersonal .bodyModal .container3elements input:nth-child(1){
+        text-align: center;
+        width: 26%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+
+    }
+
+
+
+    .modalPersonal .bodyModal .container3elements img{
+        width: 33px;
+        height: 33px;
+        border: 1px solid #707070;
+        margin: 0px 2%;
+    }
+
+
+    .modalPersonal .bodyModal .container3elements .file input{
+        display: none;
+    }
+
+    .modalPersonal .bodyModal .container3elements .file label{
+        display: block;
+        padding: auto;
+        border: 1px solid #707070;
+        background-color: #C7C0C0;
+        cursor: pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        width: 110px;
+        text-align: center;
+        height: 25px;
+    }
+
+    .modalPersonal .footerModal{
+        background-color: #F1E1BC;
+        text-align: center;
+    }
+
+    .modalPersonal .footerModal button{
+        width: 120px;
+        margin: 10px 25px;
+        border: 1px solid #78664E;
+    }
+
+    .modalPersonal .footerModal .btnAgregar{
+        background-color: #AAF08F;
+    }
+
+    .modalPersonal .footerModal .btnSalir{
+        background-color: #F08F8F;
+    }
+
+    .containerPreviewImage{
+        width: 24%;
+        height: 61%;
+        background-color: white;
+        margin-left: 10px;
+        transition-property: width, visibility, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        
+    }
+
+    .containerPreviewImage .header{
+        background-color: #F1E1BC;
+        height: 80px;
+        text-align: center;
+        transition-property: clip-path, background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    .containerPreviewImage .header:hover{
+        background-color: #F1E1BC;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    
+
+    .containerPreviewImage .header p{
+        
+        position: relative;
+        top: 30%;
+    }
+
+    .containerPreviewImage  .body img{
+        height: 270px;
+        width: 100%;
+        
+    }
+
+    .containerPreviewImage .actions{
+        background-color:#F1E1BC ;
+        height: 11%;
+        text-align: center;
+    }
+
+    .containerPreviewImage .actions button{
+        margin: 3% 0px;
+        background-color: #F08F8F;
+        border: 1px solid #707070;
+        width: 30%;
+    }
+
+
+    .PreviewImageClose{
+         width: 0.1%;
+        /* clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+         */
+
+         opacity: 0;
+        visibility: hidden;
+       
+    }
+
+}
+
+
+
+

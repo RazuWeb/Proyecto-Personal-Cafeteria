@@ -1,0 +1,57 @@
+*******Opcion 1
+--productos
+id
+nombre
+descripcion
+categoria
+precio
+imagen(url) o blob
+
+******opcion 2
+--productos
+id
+nombre
+descripcion
+categoria
+precio
+idImagen
+
+--imageProductos
+idImage
+nombreImagen
+url
+
+--userAdmins
+id
+nombreCompleto
+user
+password
+userCreated
+
+--AccionesRealizadas
+id
+nombreAccion
+fechaAccion
+userCreated
+
+--Pedido
+id
+idProducto
+cantidad
+
+--orden
+id
+idUser
+NombreComprador
+Usuario
+MetodoPago
+TotalApagar
+idDomicilio
+Status
+
+--detalle Orden
+id
+idOrden
+idProducto
+cantidad
+precio
